@@ -40,8 +40,7 @@ export default {
         .catch((error) => {
           console.log(error.response);
           this.errors = ["Invalid email or password."];
-          this.email = "";
-          this.password = "";
+          this.newSessionParams = {};
         });
     },
   },
