@@ -16,6 +16,9 @@
       <div>
         <label>Plot:</label>
         <input type="text" v-model="newMovieParams.plot" />
+        <br />
+        <small>{{ 100 - newMovieParams.plot.length }} characters remaining</small>
+        <p>{{ newMovieParams }}</p>
       </div>
       <input type="submit" value="Create" />
     </form>
@@ -29,7 +32,9 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newMovieParams: {},
+      newMovieParams: {
+        plot: "",
+      },
       errors: [],
     };
   },

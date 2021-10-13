@@ -53,7 +53,7 @@ export default {
         });
     },
     destroyMovie: function () {
-      axios.delete(`/movies/${this.editMovieParams.id}`).then((response) => {
+      axios.delete(`/movies/${this.editMovieParams.idcd}`).then((response) => {
         console.log(response.data);
         this.$router.push("/movies");
       });
