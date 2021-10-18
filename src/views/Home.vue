@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <h1>Movies</h1>
+    <img
+      src="https://images.unsplash.com/photo-1539481915544-f5cd50562d66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=728&q=80"
+      alt="Movie Theatre Marquee"
+      width="600"
+      height="600"
+    />
+    <h1 style="background-color: rgb(106, 90, 205)">Movies</h1>
     <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>Movie: {{ movie.title }} {{ movie.year }}</h2>
     </div>
@@ -16,7 +22,11 @@
   </div>
 </template>
 
-<style></style>
+<style>
+/* body {
+  background-image: url("https://images.unsplash.com/photo-1539481915544-f5cd50562d66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=728&q=80");
+} */
+</style>
 
 <script>
 import axios from "axios";
