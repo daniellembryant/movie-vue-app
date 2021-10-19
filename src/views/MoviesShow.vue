@@ -4,7 +4,8 @@
     <p>Title: {{ currentMovie.title }}</p>
     <p>Year: {{ currentMovie.year }}</p>
     <p>Plot: {{ currentMovie.plot }}</p>
-    <router-link :to="`/movies/${currentMovie.id}/edit`">Edit Movie</router-link>
+    <router-link :to="`/movies/${currentMovie.id}/edit`" type="button" class="btn btn-success">Edit Movie</router-link>
+    <!-- <router-link :to="`/movies/${currentMovie.id}/edit`">Edit Movie</router-link> -->
   </div>
 </template>
 

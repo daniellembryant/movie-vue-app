@@ -23,7 +23,23 @@
     <input v-model="titleFilter" />
     <div v-for="movie in orderBy(filterBy(movies, titleFilter, 'title'), sortAttribute)" v-bind:key="movie.id">
       <h2>Movie: {{ movie.title }} {{ movie.year }}</h2>
-      <router-link :to="`/movies/${movie.id}`">See Details</router-link>
+      <!-- cards -->
+      <div class="card text-center mx-auto" style="width: 18rem">
+        <router-link :to="`/movies/${movie.id}`">
+          <img
+            src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+            class="card-img-top"
+            alt="..."
+          />
+        </router-link>
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text">
+            {{ movie.plot }}
+          </p>
+          <!-- <a href="#" class="btn btn-primary">See Details</a> -->
+        </div>
+      </div>
     </div>
   </div>
 </template>

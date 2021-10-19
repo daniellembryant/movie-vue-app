@@ -18,7 +18,8 @@
       Year:
       <input type="text" v-model="newMovieParams.year" />
     </div> -->
-    <button v-on:click="createMovie()">Create Movie</button>
+    <button type="button" v-on:click="createMovie()" class="btn btn-success">Create Movie</button>
+    <!-- <button v-on:click="createMovie()">Create Movie</button> -->
   </div>
 </template>
 

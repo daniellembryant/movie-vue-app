@@ -1,7 +1,7 @@
 <template>
   <div class="movies-new">
     <form v-on:submit.prevent="createMovie()">
-      <h1 style="background-color: rgb(106, 90, 205)">New Movie</h1>
+      <h1 style="background-color: rgb(106, 90, 205)">Create Movie</h1>
       <img
         src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
       "
@@ -27,7 +27,8 @@
         <small>{{ 100 - newMovieParams.plot.length }} characters remaining</small>
         <p>{{ newMovieParams }}</p>
       </div>
-      <input type="submit" value="Create" />
+      <input type="submit" value="Create" class="btn btn-success" />
+      <!-- <button type="button" class="btn btn-success">Success</button> -->
     </form>
   </div>
 </template>
